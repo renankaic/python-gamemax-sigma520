@@ -39,4 +39,4 @@ def call_repeatedly(interval, func, *args):
 print('Connected to {}\n'.format(PRODUCT_ID))
 
 seconds = 1
-cancel_future_calls = call_repeatedly(seconds, write_to_cpu_fan_display, device)1
+cancel_future_calls = call_repeatedly(seconds, write_to_cpu_fan_display, device)
