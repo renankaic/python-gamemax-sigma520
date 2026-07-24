@@ -14,9 +14,15 @@ Credits to the script creator: https://github.com/martiniano/
 
 ## Requirements
 
+Install the following by using your package manager
 - python
 - python-hid
 - python-psutil
+
+Example:
+```bash
+sudo pacman -S python-hid python-psutil
+```
 
 ## CPU temperature
 
@@ -26,7 +32,7 @@ This script is using tctl temperature from k10temp linux module. More details [h
 
 First identifer the vendorId and productId of you device. You can use the `lsusb` utility on linux.
 
-Than replace the `VENDER_ID` and `PRODUCT_ID` ON cpu_cooler.py script.
+Than replace the `VENDER_ID` and `PRODUCT_ID` ON `cpu_cooler.py` script file.
 
 After, exec:
 
@@ -36,7 +42,7 @@ sudo python cpu_cooler.py
 
 To run without `sudo` it's necessary to create an `udev rule` to allow you user access the device.
 
-Create a file at `/etc/udev/rules.d/99-cpu-cooler.rules` with content: (replace `VENDOR-ID` and `PRODUCT-ID` with your vendor-id and product-id)
+Create a file at `/etc/udev/rules.d/99-cpu-cooler.rules` with content: (replace `VENDOR-ID` and `PRODUCT-ID` with your vendor-id and product-id without the `0x` part)
 
 ```bash
 SUBSYSTEMS=="usb", ATTRS{idVendor}=="VENDOR-ID", ATTRS{idProduct}=="PRODUCT-ID", MODE="0666"
@@ -57,7 +63,7 @@ python cpu_cooler.py
 
 ## Run as service
 
-To exec the script as service and show cpu cooler even after reboot, you can create a `systemd service`.
+To exec the script as service and show cpu cooler even after reboot, you can create a `systemd service` for your user.
 
 First, let's copy the `cpu_cooler.py` to `~/.local/bin` folder:
 
