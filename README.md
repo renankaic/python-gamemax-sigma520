@@ -10,7 +10,7 @@ Credits to the script creator: https://github.com/martiniano/
 
 ![](images/cpu-cooler.jpeg)
 
-![](images/water-cooler-husky-glacier-argb.webp)
+![](images/gamemax-sigma-520-led.jpg)
 
 ## Requirements
 
@@ -43,9 +43,10 @@ sudo python cpu_cooler.py
 To run without `sudo` it's necessary to create an `udev rule` to allow you user access the device.
 
 Create a file at `/etc/udev/rules.d/99-cpu-cooler.rules` with content: (replace `VENDOR-ID` and `PRODUCT-ID` with your vendor-id and product-id without the `0x` part)
+*The bash below already contains the IDs for Gamemax Sigma 520 (5131 and 2007)*
 
 ```bash
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="VENDOR-ID", ATTRS{idProduct}=="PRODUCT-ID", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="5131", ATTRS{idProduct}=="2007", MODE="0666"
 ```
 
 Update the udev rules:
