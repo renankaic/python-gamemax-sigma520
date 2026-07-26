@@ -6,7 +6,7 @@ Since the manufacture supply a software only for Windows.
 
 Tested with Water Cooler Mancer Mystic G1 (illustrative photos of another model) and Gamemax Sigma 520
 
-![](images/gamemax-sigma-520-led.jpg)
+![](https://github.com/renankaic/python-gamemax-sigma520/blob/main/images/gamemax-sigma-520-led.jpg?raw=true)
 
 Credits to the script creator: https://github.com/martiniano/
 
